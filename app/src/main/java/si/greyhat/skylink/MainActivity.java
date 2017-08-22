@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.spongycastle.jce.provider.BouncyCastleProvider;
+
+import java.security.Security;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -48,5 +52,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    static {
+        Security.addProvider(new BouncyCastleProvider());
     }
 }
