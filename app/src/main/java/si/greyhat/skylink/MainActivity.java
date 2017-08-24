@@ -21,9 +21,8 @@ import java.io.IOException;
 import java.security.Security;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback {
-
-    private MediaPlayer mp = null;
-    private SurfaceView mSurfaceView = null;
+    MediaPlayer mp;
+    SurfaceView mSurfaceView;
 
     String TAG = "skylink";
 
@@ -36,32 +35,38 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     @Override
     protected void onResume() {
         super.onResume();
+       // mp.start();
+
         Log.i(TAG, "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        releaseMediaPlayer();
+        //releaseMediaPlayer();
+        mp.release();
         Log.i(TAG, "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        mp.release();
         Log.i(TAG, "onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+       // mp.start();
         Log.i(TAG, "onRestart");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        releaseMediaPlayer();
+        mp.release();
+       // releaseMediaPlayer();
         Log.i(TAG, "onDestroy");
     }
 
@@ -76,6 +81,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        mp.release();
         Log.i(TAG, "onSaveInstanceState");
     }
 
@@ -93,12 +99,17 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
 
         mSurfaceView = (SurfaceView)findViewById(R.id.surfaceView);
         mSurfaceView.getHolder().addCallback(this);
-        mp = new MediaPlayer();
+
+        Log.i(TAG, "onCreate");
+
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
+        mp = new MediaPlayer();
+
+        Log.i(TAG, "onsurfaceCreated");
 
         AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.slideshow);
 
