@@ -96,10 +96,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mSurfaceView = (SurfaceView)findViewById(R.id.surfaceView);
         mSurfaceView.getHolder().addCallback(this);
-
         Log.i(TAG, "onCreate");
 
     }
@@ -168,11 +166,5 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         return super.onOptionsItemSelected(item);
     }
 
-    private void releaseMediaPlayer() {
-        if (mp != null) {
-            mp.release();
-            mp = null;
-        }
-    }
 
 }
