@@ -52,6 +52,7 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
+        android:background="@drawable/borderedittext"
         android:id="@+id/editText" />
 
     <LinearLayout
