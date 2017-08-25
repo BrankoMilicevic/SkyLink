@@ -17,7 +17,7 @@
         android:id="@+id/imageView" />
 
     <TextView
-        android:text="Sky Link Chat\n Made in Swiss Alps"
+        android:text="Sky Link\n Made in Swiss Alps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"

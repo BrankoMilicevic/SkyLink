@@ -94,7 +94,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         Log.i(TAG, "onCreate");
 
         TextView tx = (TextView)findViewById(R.id.textView);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/CalibreApp-Medium.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/CalibreApp-Light.ttf");
         tx.setTypeface(custom_font);
     }
 
