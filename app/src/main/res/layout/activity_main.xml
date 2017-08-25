@@ -32,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:text="Password"
         android:ems="10"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
