@@ -17,16 +17,28 @@
         android:id="@+id/imageView" />
 
     <TextView
-        android:text="Sky Link\n Made in Swiss Alps"
+        android:text="Sky Link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="87dp"
+        android:layout_marginTop="48dp"
         android:id="@+id/textView"
         android:gravity="center"
-        android:textSize="24dp"
-        android:textColor="@android:color/white"/>
+        android:textSize="46dp"
+        android:textColor="#757d80"/>
+
+    <TextView
+        android:text="Made in Swiss Alps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#fcffff"/>
 
     <EditText
         android:layout_width="wrap_content"
