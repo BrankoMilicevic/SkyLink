@@ -2,29 +2,23 @@ package si.greyhat.skylink;
 
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import org.spongycastle.jce.provider.BouncyCastleProvider;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.widget.TextView;
 
 import java.io.IOException;
-import java.security.Security;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback {
     MediaPlayer mp;
     SurfaceView mSurfaceView;
 
-    String TAG = "skylink";
+    String TAG = "SKYLINK";
 
     @Override
     protected void onStart() {
@@ -36,7 +30,6 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     protected void onResume() {
         super.onResume();
        // mp.start();
-
         Log.i(TAG, "onResume");
     }
 
@@ -100,6 +93,9 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         mSurfaceView.getHolder().addCallback(this);
         Log.i(TAG, "onCreate");
 
+        TextView tx = (TextView)findViewById(R.id.textView);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/CalibreApp-Medium.ttf");
+        tx.setTypeface(custom_font);
     }
 
     @Override
