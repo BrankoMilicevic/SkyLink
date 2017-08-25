@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="26dp"
         android:src="@drawable/logo"
         android:id="@+id/imageView" />
 
@@ -22,10 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="38dp"
         android:id="@+id/textView"
         android:gravity="center"
-        android:textSize="46dp"
+        android:textSize="42dp"
         android:textColor="#757d80"/>
 
     <TextView
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="82dp"
         android:id="@+id/textView2"
         android:gravity="center"
         android:textSize="16dp"
@@ -44,11 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:text="Password"
         android:ems="10"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="90dp"
         android:id="@+id/editText" />
 
     <LinearLayout
